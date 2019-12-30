@@ -1,0 +1,89 @@
+server:
+  #修改端口号
+  port: 8080
+  servlet:
+    #修改访问名
+    context-path: /demo
+
+spring:
+  #国际化相关
+  messages:
+    basename: i18n.login
+
+  thymeleaf:
+    #禁用thymeleaf缓存
+    cache: false
+
+  mvc:
+    #自定义日期格式化,默认dd/MM/yyyy
+    date-format: yyyy-MM-dd
+
+  #数据库相关
+  datasource:
+    #url和driverclassname是8.0以上版本的写法,新增最后的时区
+    url: jdbc:mysql://192.168.236.135:3306/demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    #程序运行的时候执行sql
+    #initialization-mode: always
+    #修改数据库连接池为druid
+    type: com.alibaba.druid.pool.DruidDataSource
+    #以下为 druid 数据源专有配置
+    druid:
+      #初始化大小
+      initial-size: 5
+      #最小值
+      min-idle: 5
+      #最大值
+      max-active: 20
+      #最大等待时间，配置获取连接等待超时，时间单位都是毫秒ms
+      max-wait: 60000
+      #配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+      time-between-eviction-runs-millis: 60000
+      #配置一个连接在池中最小生存的时间，单位是毫秒
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM DUAL
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      pool-prepared-statements: true
+      #配置监控统计拦截的filters，stat:监控统计、slf4j：日志记录、wall：防御sql注入
+      filters: stat,wall,slf4j
+      max-pool-prepared-statement-per-connection-size: 20
+      use-global-data-source-stat: true
+      # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
+      connection-properties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=500
+      # 配置监控服务器
+      stat-view-servlet:
+        # 1.1.10以后的版本需要指定为true 不然默认是关闭的就会出现404
+        enabled: true
+        #是否可以重置
+        reset-enable: true
+        url-pattern: /druid/*
+        login-username: admin
+        login-password: 123456
+        # 添加IP白名单
+        #allow: 127.0.0.1,192.168.1.101
+        # 添加IP黑名单，当白名单和黑名单重复时，黑名单优先级更高
+        #deny: 127.0.0.1,192.168.1.101
+      web-stat-filter:
+        enabled: true
+        # 添加过滤规则
+        url-pattern: /*
+        # 忽略过滤格式
+        exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+
+mybatis:
+  #配置别名,pojo的包名
+  type-aliases-package: com.yese.pojo
+  #mapper.xml文件的路径
+  mapper-locations: classpath:mybatis/mapper/*.xml
+
+#开启springboot的调试类
+#debug: true
+
+#日志
+logging:
+  level:
+    com.yese.mapper: debug

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.yese.mapper.EmployeeMapper">
+
+    <resultMap type="employee" id="empMap">
+        <id property="id" column="id"/>
+        <result property="lastName" column="lastName"/>
+        <result property="email" column="email"/>
+        <result property="gender" column="gender"/>
+        <result property="birth" column="birth"/>
+        <association property="department" javaType="com.yese.pojo.Department">
+            <id property="id" column="deptId"/>
+            <result property="departmentName" column="departmentName"/>
+        </association>
+    </resultMap>
+
+    <select id="getAll" resultMap="empMap">
+        SELECT
+            a.id,
+            a.lastName,
+            a.email,
+            a.gender,
+            a.birth,
+            a.deptId,
+            b.departmentName
+        FROM
+            T_SYS_EMPLOYEE a,
+            T_SYS_DEPARTMENT b
+        WHERE
+            a.deptId = b.id
+    </select>
+
+
+    <insert id="save">
+        insert into T_SYS_EMPLOYEE (id, lastName, email, gender, birth) values (#{id},#{lastName},#{email}),#{gender},#{birth}
+    </insert>
+
+    <select id="getById" resultType="employee">
+        select * from T_SYS_EMPLOYEE where id=#{id};
+    </select>
+
+    <delete id="deleteById">
+
+    </delete>
+
+    <update id="update"></update>
+
+
+
+
+
+</mapper>
