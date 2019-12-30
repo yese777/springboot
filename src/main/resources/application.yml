@@ -21,7 +21,7 @@ spring:
   #数据库相关
   datasource:
     #url和driverclassname是8.0以上版本的写法,新增最后的时区
-    url: jdbc:mysql://192.168.236.135:3306/demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    url: jdbc:mysql://192.168.236.135:3306/demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
@@ -73,6 +73,44 @@ spring:
         url-pattern: /*
         # 忽略过滤格式
         exclusions: "*.js,*.gif,*.jpg,*.png,*.css,*.ico,/druid/*"
+
+  redis:
+    #配置Redis的主机地址
+    host: 192.168.236.135
+    #端口
+    port: 6379
+    #默认无密码
+    password:
+    jedis:
+      pool:
+        # 连接池最大连接数（使用负值表示没有限制）
+        max-active: 8
+        # 连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1
+        # 连接池中的最大空闲连接
+        max-idle: 500
+        # 连接池中的最小空闲连接
+        min-idle: 0
+    lettuce:
+      shutdown-timeout: 0
+
+  rabbitmq:
+    #主机地址,不写默认为localhost
+    host: 192.168.236.135
+    username: guest
+    password: guest
+    #端口,不写默认5672
+    port: 5672
+    #虚拟主机,可以不写,不写默认为/
+    virtual-host: /
+
+  #邮件
+  mail:
+    username: 1321810135@qq.com
+    #开启POP3/SMTP/IMAP的密码
+    password: kjrdfaofrpeyjaai
+    #主机地址(这是qq的服务器)
+    host: smtp.qq.com
 
 mybatis:
   #配置别名,pojo的包名

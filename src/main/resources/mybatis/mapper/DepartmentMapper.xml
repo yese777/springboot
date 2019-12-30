@@ -6,7 +6,7 @@
 <mapper namespace="com.yese.mapper.DepartmentMapper">
 
     <select id="getAll" resultType="department">
-        select * from T_SYS_EMPLOYEE
+        select * from T_SYS_DEPARTMENT
     </select>
 
 </mapper>

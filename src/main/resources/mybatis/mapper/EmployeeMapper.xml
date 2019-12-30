@@ -35,18 +35,20 @@
 
 
     <insert id="save">
-        insert into T_SYS_EMPLOYEE (id, lastName, email, gender, birth) values (#{id},#{lastName},#{email}),#{gender},#{birth}
+        insert into T_SYS_EMPLOYEE (id, lastName, email, gender, birth, deptId) values (#{id},#{lastName},#{email},#{gender},#{birth},#{department.id})
     </insert>
 
-    <select id="getById" resultType="employee">
+    <select id="getById" resultMap="empMap">
         select * from T_SYS_EMPLOYEE where id=#{id};
     </select>
 
     <delete id="deleteById">
-
+        delete from T_SYS_EMPLOYEE where id=#{id}
     </delete>
 
-    <update id="update"></update>
+    <update id="update">
+        update T_SYS_EMPLOYEE set lastName=#{lastName},email=#{email},gender=#{gender},birth=#{birth},deptId=#{department.id}   where id=#{id}
+    </update>
 
 
 

@@ -8,6 +8,7 @@ public interface DepartmentService {
 
     /**
      * 查询所有部门
+     *
      * @return
      */
     List<Department> getAll();
