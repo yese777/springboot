@@ -8,7 +8,7 @@ public class ConstantUtil {
     /**
      * 登录用户
      */
-    public final static String LOGIN_USER = "loginUser";
+    public static final String LOGIN_USER = "loginUser";
 
 
 }
