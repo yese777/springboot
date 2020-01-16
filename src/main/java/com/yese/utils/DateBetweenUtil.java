@@ -18,7 +18,7 @@ public class DateBetweenUtil {
      *
      * @param beginDate 开始时间
      * @param endDate   结束时间
-     * @return
+     * @return List
      */
     public static List<String> getDateBetweenWithout(String beginDate, String endDate) {
         List<String> dateList = new ArrayList<>();//保存日期集合
@@ -49,7 +49,7 @@ public class DateBetweenUtil {
      *
      * @param beginDate 开始时间
      * @param endDate   结束时间
-     * @return
+     * @return List
      */
     public static List<String> getDateBetweenWith(String beginDate, String endDate) {
         // 返回的日期集合
