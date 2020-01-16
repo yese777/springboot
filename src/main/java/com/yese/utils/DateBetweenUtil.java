@@ -21,7 +21,7 @@ public class DateBetweenUtil {
      * @return List
      */
     public static List<String> getDateBetweenWithout(String beginDate, String endDate) {
-        List<String> dateList = new ArrayList<>();//保存日期集合
+        List<String> dateList = new ArrayList<>();// 保存日期集合
         Calendar startCalendar = Calendar.getInstance();
         Calendar endCalendar = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
