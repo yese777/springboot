@@ -6,6 +6,9 @@ import java.io.InputStream;
 import java.sql.*;
 import java.util.Properties;
 
+/**
+ * 封装jdbc获取连接和释放资源
+ */
 public class JDBCUtils {
 
     private static String driverClass = null;
