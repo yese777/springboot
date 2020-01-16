@@ -1,10 +1,10 @@
-package com.yese.util;
+package com.yese.utils;
 
 import lombok.Data;
 
 
 /**
- * 封装返回的数据
+ * 封装返回给前端的数据
  */
 @Data
 public class MyResult {
