@@ -6,7 +6,7 @@ package com.yese.utils;
 public class ConstantUtil {
 
     /**
-     * 登录用户
+     * 当前登录用户
      */
     public static final String LOGIN_USER = "loginUser";
 
