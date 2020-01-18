@@ -29,7 +29,7 @@ public class MyLocaleResolver implements LocaleResolver {
             locale = new Locale(split[0], split[1]);
         }
         return locale;
-        
+
     }
 
     @Override

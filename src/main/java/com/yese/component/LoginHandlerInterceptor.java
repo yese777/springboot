@@ -8,10 +8,13 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-//登录拦截器
+/**
+ * 登录拦截器
+ */
 public class LoginHandlerInterceptor implements HandlerInterceptor {
-    //目标方法执行之前
+
     @Override
+    // 目标方法执行之前
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         User user = (User) request.getSession().getAttribute(ConstantUtil.LOGIN_USER);
         if (user == null) {//未登录，返回登录页面
@@ -23,4 +26,5 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
             return true;
         }
     }
+    
 }
