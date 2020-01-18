@@ -19,7 +19,8 @@ public class MyLocaleResolver implements LocaleResolver {
     public Locale resolveLocale(HttpServletRequest request) {
 
         String language = request.getParameter("l");
-        Locale locale = Locale.getDefault(); //如果没有获取到就使用系统默认的
+        //如果没有获取到就使用系统默认的
+        Locale locale = Locale.getDefault();
         //如果请求链接不为空
         if (!StringUtils.isEmpty(language)) {
             //分割请求参数
@@ -28,6 +29,7 @@ public class MyLocaleResolver implements LocaleResolver {
             locale = new Locale(split[0], split[1]);
         }
         return locale;
+        
     }
 
     @Override
