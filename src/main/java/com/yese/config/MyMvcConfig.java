@@ -15,7 +15,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
     // 定制首页
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/").setViewName("login");//输入/,跳login.html
+        registry.addViewController("/").setViewName("login");// 输入/,跳login.html
         registry.addViewController("/index.html").setViewName("login");//输入/index.html,跳login.html
         registry.addViewController("/main.html").setViewName("dashboard");
     }
