@@ -21,7 +21,7 @@ public class MyLocaleResolver implements LocaleResolver {
         String language = request.getParameter("l");
         // 如果没有获取到就使用系统默认的
         Locale locale = Locale.getDefault();
-        //如果请求链接不为空
+        // 如果请求链接不为空
         if (!StringUtils.isEmpty(language)) {
             //分割请求参数
             String[] split = language.split("_");
