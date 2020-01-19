@@ -14,7 +14,7 @@ import java.util.Locale;
  */
 public class MyLocaleResolver implements LocaleResolver {
 
-    //解析请求
+    // 解析请求
     @Override
     public Locale resolveLocale(HttpServletRequest request) {
 
