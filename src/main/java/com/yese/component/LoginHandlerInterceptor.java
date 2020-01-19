@@ -22,7 +22,7 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
             request.getRequestDispatcher("/index.html").forward(request, response);
             return false;
         } else {
-            //登录，放行
+            // 登录，放行
             return true;
         }
     }
