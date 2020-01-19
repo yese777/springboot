@@ -23,9 +23,9 @@ public class MyLocaleResolver implements LocaleResolver {
         Locale locale = Locale.getDefault();
         // 如果请求链接不为空
         if (!StringUtils.isEmpty(language)) {
-            //分割请求参数
+            // 分割请求参数
             String[] split = language.split("_");
-            //国家，地区
+            // 国家，地区
             locale = new Locale(split[0], split[1]);
         }
         return locale;
