@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class MyAMQPConfig {
     @Bean
     public MessageConverter messageConverter() {
-        //json格式序列化消息体
+        // json格式序列化消息体
         return new Jackson2JsonMessageConverter();
     }
 }
