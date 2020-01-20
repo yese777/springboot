@@ -25,7 +25,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
         return new MyLocaleResolver();
     }
 
-    //注册拦截器
+    // 注册拦截器
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         // 注册拦截器，及拦截请求和要剔除哪些请求!
