@@ -39,5 +39,5 @@ public class MyRedisConfig {
         template.afterPropertiesSet();
         return template;
     }
-    
+
 }

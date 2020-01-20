@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class AsyncController {
 
     @Autowired
-    AsyncServiceImpl asyncServiceImpl;
+    private AsyncServiceImpl asyncServiceImpl;
 
     @GetMapping("/asyncTest")
     public String asyncTest() {
