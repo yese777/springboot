@@ -20,5 +20,5 @@ public class AsyncController {
         asyncServiceImpl.asyncTest();
         return "success";
     }
-    
+
 }
