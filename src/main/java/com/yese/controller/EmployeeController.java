@@ -63,7 +63,7 @@ public class EmployeeController {
         return "emp/update";
     }
 
-    //修改员工(表单需要包含员工id)
+    // 修改员工(表单需要包含员工id)
     @PostMapping("/updateEmp")
     public String updateEmp(Employee employee) {
         employeeService.update(employee);
@@ -71,7 +71,7 @@ public class EmployeeController {
         return "redirect:/emps";
     }
 
-    //删除员工
+    // 删除员工
     @GetMapping("/delEmp/{id}")
     public String delEmp(@PathVariable("id") Integer id) {
         employeeService.deleteById(id);
