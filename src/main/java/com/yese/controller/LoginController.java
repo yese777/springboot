@@ -34,18 +34,18 @@ public class LoginController {
         User user = userService.getUserByUsernameAndPwd(username, password);
 
         if (null != user) {
-            //登录成功！存放session
+            // 登录成功！存放session
             session.setAttribute(ConstantUtil.LOGIN_USER, user);
             // 防止表单重复提交，重定向
             return "redirect:/main.html";
         } else {
-            //登录失败！存放错误信息
+            // 登录失败！存放错误信息
             model.addAttribute("msg", "用户名密码错误!");
             return "login";
         }
     }
 
-    //登出
+    // 登出
     @GetMapping("/user/loginOut")
     public String loginOut(HttpSession session) {
         session.invalidate();
