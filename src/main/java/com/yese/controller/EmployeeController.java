@@ -54,12 +54,12 @@ public class EmployeeController {
     public String toUpdateEmp(@PathVariable("id") Integer id, Model model) {
         // 根据id查出来员工
         Employee employee = employeeService.getById(id);
-        //将员工信息返回页面
+        // 将员工信息返回页面
         model.addAttribute("emp", employee);
-        //查出所有的部门，提供修改选择
+        // 查出所有的部门，提供修改选择
         List<Department> departments = departmentService.getAll();
         model.addAttribute("depts", departments);
-        //跳转修改页面(add是修改和添加二合一的页面)
+        // 跳转修改页面
         return "emp/update";
     }
 
