@@ -22,7 +22,7 @@ public class EmployeeController {
     @Autowired
     private DepartmentService departmentService;
 
-    //查询所有员工并跳转列表页面
+    // 查询所有员工并跳转列表页面
     @GetMapping("/emps")
     public String list(Model model) {
         List<Employee> employees = employeeService.getAll();
@@ -30,7 +30,7 @@ public class EmployeeController {
         return "emp/list";
     }
 
-    //跳转到添加页面
+    // 跳转到添加页面
     @GetMapping("/emp")
     public String toAddPage(Model model) {
         //查出所有的部门，提供选择
