@@ -35,7 +35,7 @@ public class IDCardUtil {
 
         boolean matches = IDNumber.matches(regularExpression);
 
-        //判断第18位校验值
+        // 判断第18位校验值
         if (matches) {
 
             if (IDNumber.length() == 18) {
