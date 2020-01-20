@@ -16,7 +16,7 @@ import javax.servlet.http.HttpSession;
 public class LoginController {
 
     @Autowired
-    UserService userService;
+   private UserService userService;
 
     /**
      * 用户登录
