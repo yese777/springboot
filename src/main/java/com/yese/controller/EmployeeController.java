@@ -41,11 +41,11 @@ public class EmployeeController {
 
     // 添加员工
     @PostMapping("/emp")
-    //接收前端传递的参数，自动封装成为对象[要求前端传递的参数名，和属性名一致]
+    // 接收前端传递的参数，自动封装成为对象[要求前端传递的参数名，和属性名一致]
     public String addEmp(Employee employee) {
         System.out.println(employee);
-        employeeService.save(employee); //保存员工信息
-        //添加完成回到列表页面,此处是一个请求,可以使用redirect或者forward
+        employeeService.save(employee); // 保存员工信息
+        // 添加完成回到列表页面,此处是一个请求,可以使用redirect或者forward
         return "redirect:/emps";
     }
 
