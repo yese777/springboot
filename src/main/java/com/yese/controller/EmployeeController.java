@@ -17,10 +17,10 @@ import java.util.List;
 public class EmployeeController {
 
     @Autowired
-    EmployeeService employeeService;
+    private EmployeeService employeeService;
 
     @Autowired
-    DepartmentService departmentService;
+    private DepartmentService departmentService;
 
     //查询所有员工并跳转列表页面
     @GetMapping("/emps")
