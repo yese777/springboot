@@ -49,10 +49,10 @@ public class EmployeeController {
         return "redirect:/emps";
     }
 
-    //跳转到员工修改页面,将当前员工数据回显
+    // 跳转到员工修改页面,将当前员工数据回显
     @GetMapping("/emp/{id}")
     public String toUpdateEmp(@PathVariable("id") Integer id, Model model) {
-        //根据id查出来员工
+        // 根据id查出来员工
         Employee employee = employeeService.getById(id);
         //将员工信息返回页面
         model.addAttribute("emp", employee);
