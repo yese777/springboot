@@ -9,5 +9,5 @@ import java.util.List;
 public interface DepartmentMapper {
 
     List<Department> getAll();
-    
+
 }
