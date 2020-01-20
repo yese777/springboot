@@ -33,13 +33,13 @@ public class EmployeeController {
     // 跳转到添加页面
     @GetMapping("/emp")
     public String toAddPage(Model model) {
-        //查出所有的部门，提供选择
+        // 查出所有的部门，提供选择
         List<Department> departments = departmentService.getAll();
         model.addAttribute("depts", departments);
         return "emp/add";
     }
 
-    //添加员工
+    // 添加员工
     @PostMapping("/emp")
     //接收前端传递的参数，自动封装成为对象[要求前端传递的参数名，和属性名一致]
     public String addEmp(Employee employee) {
