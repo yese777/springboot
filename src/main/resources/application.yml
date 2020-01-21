@@ -3,7 +3,7 @@ server:
   port: 8080
   servlet:
     #修改访问名
-    context-path: /demo
+    context-path: /ssm
 
 spring:
   #国际化相关
