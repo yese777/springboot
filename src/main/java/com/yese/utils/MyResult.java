@@ -19,6 +19,7 @@ public class MyResult {
 
     
 
+
     // 响应中的数据
     private Object data;
 
