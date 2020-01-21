@@ -15,15 +15,6 @@ public class MyResult {
     // 响应消息
     private String msg;
 
-
-
-
-
-    
-
-
-
-
     // 响应中的数据
     private Object data;
 
