@@ -21,8 +21,8 @@ insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `dep
 insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('6','张三6','132@qq.com','1','2019-12-31','3');
 insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('7','张三7','1321810135@qq.com','1','2019-12-02','1');
 insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('8','张三8','1565565@163.com','1','2019-12-02','2');
-insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('10','张三9','1321810135@qq.com','1','2019-12-19','3');
-insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('11','张三10','1565565@163.com','0','2019-12-08','1');
-insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('12','张三11','1565565@163.com','0','2019-12-16','2');
-insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('14','张三100','1321810135@qq.com','0','2020-01-01','2');
-insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('17','张三9','1321810135@qq.com','0','2019-12-29','3');
+insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('9','张三9','1321810135@qq.com','1','2019-12-19','3');
+insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('10','张三10','1565565@163.com','0','2019-12-08','1');
+insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('11','张三11','1565565@163.com','0','2019-12-16','2');
+insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('12','张三12','1321810135@qq.com','0','2020-01-01','2');
+insert into `T_SYS_EMPLOYEE` (`id`, `lastName`, `email`, `gender`, `birth`, `deptId`) values('13','张三13','1321810135@qq.com','0','2019-12-29','3');
