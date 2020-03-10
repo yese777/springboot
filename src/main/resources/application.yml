@@ -3,7 +3,7 @@ server:
   port: 8080
   servlet:
     #修改访问名
-    context-path: /ssm
+    context-path: /springboot
 
 spring:
   #国际化相关
@@ -21,9 +21,9 @@ spring:
   #数据库相关
   datasource:
     #url和driverclassname是8.0以上版本的写法,新增最后的时区
-    url: jdbc:mysql://192.168.236.135:3306/demo?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://47.100.230.188:3306/test01?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
-    username: root
+    username: test01
     password: 123456
     #程序运行的时候执行sql
     #initialization-mode: always
@@ -76,7 +76,7 @@ spring:
 
   redis:
     #配置Redis的主机地址
-    host: 192.168.236.135
+    host: 47.100.230.188
     #端口
     port: 6379
     #默认无密码
@@ -96,7 +96,7 @@ spring:
 
   rabbitmq:
     #主机地址,不写默认为localhost
-    host: 192.168.236.135
+    host: 47.100.230.188
     username: guest
     password: guest
     #端口,不写默认5672

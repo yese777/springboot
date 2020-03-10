@@ -24,7 +24,7 @@ class SpringbootApplicationTests {
     /**
      * 日志测试
      */
-    //记录器
+    // 记录器(注意都是slf4j包下的)
     Logger logger = LoggerFactory.getLogger(getClass());
 
     @Test
