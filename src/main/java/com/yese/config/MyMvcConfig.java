@@ -12,7 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
 
-    // 定制首页
+    // 添加自定义的视图解析器,定制首页
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("login");// 输入/,跳login.html
@@ -20,6 +20,7 @@ public class MyMvcConfig implements WebMvcConfigurer {
         registry.addViewController("/main.html").setViewName("dashboard");
     }
 
+    // 注册自定义的区域解析器
     @Bean
     public LocaleResolver localeResolver() {
         return new MyLocaleResolver();
