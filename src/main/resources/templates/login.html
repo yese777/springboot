@@ -16,6 +16,7 @@
 <form class="form-signin" th:action="@{/user/login}" method="post">
     <img class="mb-4" th:src="@{/asserts/img/bootstrap-solid.svg}" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal" th:text="#{login.tip}">Please sign in</h1>
+    <!--登录失败时的提示信息,判断是否显示，判断在显示之前,如果条件不满足则不显示.使用if, ${}可以使用工具类，可以看thymeleaf的中文文档-->
     <p style="color: red" th:text="${msg}" th:if="${not #strings.isEmpty(msg)}"></p>
     <label class="sr-only" th:text="#{login.username}">Username</label>
     <input type="text" name="username" class="form-control" th:placeholder="#{login.username}" required="" autofocus="">

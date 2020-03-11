@@ -16,10 +16,13 @@ public class LoginHandlerInterceptor implements HandlerInterceptor {
     @Override
     // 目标方法执行之前
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
         User user = (User) request.getSession().getAttribute(ConstantUtil.LOGIN_USER);
         if (user == null) {// 未登录，返回登录页面
             request.setAttribute("msg", "没有权限，请先登录!");
+            // 请求转发到登录页(经过自定义的视图解析器)
             request.getRequestDispatcher("/index.html").forward(request, response);
+            // 不放行
             return false;
         } else {
             // 登录，放行

@@ -5,10 +5,14 @@
     <title>Title</title>
 </head>
 <body>
+<!--bar.html:专门用来抽取公共页面-->
 
-<!--topbar-->
+<!--topbar:顶部栏-->
+<!--th:fragment="":抽取公共片段并定义片段名,使用格式    ::片段名-->
 <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0" th:fragment="topbar">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="http://getbootstrap.com/docs/4.0/examples/dashboard/#">[[${session.loginUser.username}]]</a>
+    <!--从session中取数据-->
+    <!--后台主页显示登录用户的信息-->
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">欢迎您：[[${session.loginUser.username}]]</a>
     <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
     <ul class="navbar-nav px-3">
         <li class="nav-item text-nowrap">
@@ -17,7 +21,8 @@
     </ul>
 </nav>
 
-<!--sidebar-->
+<!--sidebar:侧边栏-->
+<!--抽取公共片段并定义id,使用格式    ::#id-->
 <nav class="col-md-2 d-none d-md-block bg-light sidebar" id="sidebar">
     <div class="sidebar-sticky">
         <ul class="nav flex-column">

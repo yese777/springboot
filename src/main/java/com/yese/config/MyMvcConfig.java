@@ -26,11 +26,14 @@ public class MyMvcConfig implements WebMvcConfigurer {
         return new MyLocaleResolver();
     }
 
-    // 注册拦截器
+    // 注册登录拦截器
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        // 注册拦截器，及拦截请求和要剔除哪些请求!
-        // 我们还需要过滤静态资源文件，否则样式显示不出来
+        /**
+         * 注册登录拦截器
+         * addPathPatterns:/**:拦截所有请求
+         * excludePathPatterns:排除哪些请求(登录不能拦截;静态资源文件不能拦截，否则样式显示不出来)
+         */
         registry.addInterceptor(new LoginHandlerInterceptor())
                 .addPathPatterns("/**").excludePathPatterns("/index.html", "/", "/user/login", "/asserts/**", "/webjars/**");
     }

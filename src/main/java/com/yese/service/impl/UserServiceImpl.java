@@ -10,6 +10,7 @@ import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
+
     @Autowired
     private UserMapper userMapper;
 
@@ -26,8 +27,8 @@ public class UserServiceImpl implements UserService {
     /**
      * 根据用户名和密码查找用户
      *
-     * @param username
-     * @param password
+     * @param username 用户名
+     * @param password 密码
      * @return
      */
     @Override
