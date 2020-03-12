@@ -47,7 +47,7 @@
 
 <div class="container-fluid">
     <div class="row">
-        <!--引入sidebar(id 的形式)-->
+        <!--引入sidebar(id 的形式),()内是传递参数给在组件,从而达到激活 class 的效果-->
         <div th:replace="~{commons/bar::#sidebar(activeUrl='main.html')}"></div>
 
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
