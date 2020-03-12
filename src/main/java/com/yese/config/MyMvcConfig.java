@@ -32,10 +32,10 @@ public class MyMvcConfig implements WebMvcConfigurer {
         /**
          * 注册登录拦截器
          * addPathPatterns:/**:拦截所有请求
-         * excludePathPatterns:排除哪些请求(登录不能拦截;静态资源文件不能拦截，否则样式显示不出来)
+         * excludePathPatterns:排除哪些请求(登录不能拦截;静态资源文件不能拦截，否则样式显示不出来;放行druid 监控页面)
          */
         registry.addInterceptor(new LoginHandlerInterceptor())
-                .addPathPatterns("/**").excludePathPatterns("/index.html", "/", "/user/login", "/asserts/**", "/webjars/**");
+                .addPathPatterns("/**").excludePathPatterns("/druid","/index.html", "/", "/user/login", "/asserts/**", "/webjars/**");
     }
 
 }
