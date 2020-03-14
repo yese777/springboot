@@ -3,6 +3,9 @@ package com.yese.service.impl;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+/**
+ * 定时任务
+ */
 @Service
 public class ScheduledServiceImpl {
 
