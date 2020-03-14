@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 异步任务测试
+ * 异步任务
  */
 @RestController
 public class AsyncController {
