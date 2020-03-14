@@ -21,7 +21,7 @@ public class ScheduledServiceImpl {
     //@Scheduled(cron = "0 * * * * MON-SAT")
     //@Scheduled(cron = "0,1,2,3,4 * * * * MON-SAT"):,是枚举
     //@Scheduled(cron = "0-4 * * * * MON-SAT"):-是区间
-    @Scheduled(cron = "0/10 * * * * MON-SAT")  //每10秒执行一次
+    @Scheduled(cron = "0/30 * * * * MON-SAT")  //每30秒执行一次
     public void hello() {
         System.out.println("这是定时任务 ... " + System.currentTimeMillis());
     }
