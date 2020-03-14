@@ -124,4 +124,4 @@ mybatis:
 #日志
 logging:
   level:
-    com.yese.mapper: debug
+    com.yese: debug
