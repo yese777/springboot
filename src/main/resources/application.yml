@@ -6,6 +6,13 @@ server:
     context-path: /springboot
 
 spring:
+
+  data:
+    elasticsearch:
+      #访问9200里面的json数据
+      cluster-name: docker-cluster
+      cluster-nodes: 192.168.236.137:9300
+
   #国际化相关配置
   messages:
     basename: i18n.login

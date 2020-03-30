@@ -1,6 +1,7 @@
 package com.yese;
 
 import com.yese.pojo.User;
+import com.yese.repository.UserRepository;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +21,9 @@ import java.util.Map;
 
 @SpringBootTest
 class SpringbootApplicationTests {
+    @Test
+    void contextLoads() {
+    }
 
     /**
      * 日志测试
@@ -115,8 +119,21 @@ class SpringbootApplicationTests {
     }
     //RabbitMQ测试结束-----------------------------------------------------------------------------------
 
-    @Test
-    void contextLoads() {
-    }
 
+
+
+
+    @Autowired
+    private UserRepository userRepository;
+
+    /**
+     * es测试
+     *
+     */
+    @Test
+    void test11(){
+        User user = new User("1","李四","123456");
+        //将对象索引到es中
+        userRepository.index(user);
+    }
 }
